@@ -1,0 +1,137 @@
+Here is the combined code:
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<style>
+#profile-photo {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+overflow: hidden;
+border: 2px solid #fff;
+}
+
+```#profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+```
+</style>
+</head>
+<body>
+<h1>Registration Form</h1>
+<form action="" method="post" enctype="multipart/form-data">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name">
+
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+
+
+<label for="phone">Phone:</label>
+<input type="text" id="phone" name="phone">
+
+
+<label for="profile_picture">Profile Picture:</label>
+<input type="file" id="profile_picture" name="profile_picture">
+
+
+<input type="submit" value="Register">
+</form>
+
+<?php
+// Connect to database
+$conn = mysqli_connect("localhost", "root", "", "test");
+
+// Check connection
+if (!$conn) {
+die("Connection failed: " . mysqli_connect_error());
+}
+
+// Check if form is submitted
+if (
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$profile_picture = $_FILES['profile_picture']['name'];
+
+```// Upload profile picture
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["profile_picture"]["name"]);
+
+if (move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $target_file)) {
+  echo "The file ". basename( $_FILES["profile_picture"]["name"]). " has been uploaded.";
+} else {
+  echo "Sorry, there was an error uploading your file.";
+}
+
+// Insert user data into database
+$sql = "INSERT INTO users (name, email, phone, profile_picture) VALUES ('$name', '$email', '$phone', '$profile_picture')";
+
+if (mysqli_query($conn, $sql)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+```
+}
+
+// Close database connection
+mysqli_close($conn);
+?>
+
+<?php
+// Connect to database
+$conn = mysqli_connect("localhost", "root", "", "test");
+
+// Check connection
+if (!$conn) {
+die("Connection failed: " . mysqli_connect_error());
+}
+
+// Get user data from database
+$sql = "SELECT * FROM users WHERE id = 1";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_assoc($result);
+
+// Close database connection
+mysqli_close($conn);
+?>
+
+<div id="profile-photo">
+<img src="<?php echo $row['profile_picture']; ?>" alt="Profile Picture">
+</div>
+<h2><?php echo $row['name']; ?></h2>
+<p>Email: <?php echo $row['email']; ?></p>
+<p>Phone: <?php echo $row['phone']; ?></p>
+</body>
+</html>
+
+Please note that this code is for demonstration purposes only and should not be used in production without proper security measures.
+
+To make the background image occupy the entire video player, you can add the following properties to your CSS:
+
+```
+.video-player {
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #333;
+  background-image: url('yun.jpg');
+  background-size: cover; /* Add this */
+  background-position: center; /* Add this */
+  background-repeat: no-repeat; /* Add this */
+}
+```
+
+Here's what each new property does:
+
+- `background-size: cover;` scales the background image to cover the entire element, maintaining its aspect ratio.
+- `background-position: center;` centers the background image horizontally and vertically.
+- `background-repeat: no-repeat;` prevents the background image from repeating.
+
+With these additions, the background image should now occupy the entire video player.
