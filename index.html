@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Sphere</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Ensure padding does not affect width/height */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            min-height: 100vh; /* Fill viewport height */
+            margin: 0; /* Remove default body margin */
+            background-color: #f0f0f0; /* Soft background color */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+
+        .header {
+            background-color: #007BFF; /* Header background color */
+            color: white;
+            padding: 20px; /* Padding for header */
+            width: 100%; /* Full width */
+            text-align: center; /* Center header text */
+        }
+
+        .nav-list {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+        }
+
+        .nav-list li {
+            display: inline; /* Inline list items */
+            margin: 0 15px; /* Space between menu items */
+        }
+
+        .nav-list a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underlines */
+            font-weight: bold; /* Bold text */
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Create a 2-column layout */
+            grid-template-rows: repeat(2, 1fr); /* Create a 2-row layout */
+            gap: 20px; /* Space between buttons */
+            width: 300px; /* Fixed width */
+            height: 300px; /* Fixed height */
+            background-color: white; /* Background color for the menu */
+            padding: 20px; /* Inner padding */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            margin: 20px 0; /* Margin for spacing */
+        }
+
+        .menu-button {
+            display: flex; /* Use flexbox for centering text */
+            justify-content: center; /* Center text horizontally */
+            align-items: center; /* Center text vertically */
+            padding: 20px; /* Spacing inside each button */
+            font-size: 16px; /* Button font size */
+            font-weight: bold; /* Button font weight */
+            color: white; /* Button text color */
+            background-color: #007BFF; /* Button background color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners for buttons */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth color transition */
+        }
+
+        .menu-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .footer {
+            background-color: #007BFF; /* Footer background color */
+            color: white; /* Footer text color */
+            text-align: center; /* Center footer text */
+            padding: 20px; /* Padding for footer */
+            width: 100%; /* Full width */
+            position: relative; /* Make footer relative */
+            bottom: 0; /* Stick to the bottom when content grows */
+        }
+
+        .footer a {
+            color: white; /* Link color */
+            text-decoration: none; /* Remove underlines */
+        }
+
+        .footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+        
+        a{
+            
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Live Sphere</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#live-tv">Live TV</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#notifications">Notifications</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="menu-container">
+        <a href="live.html" class="menu-button">Live TV</a>
+        <a href="go:S100" class="menu-button">Games</a>
+        <a href="go:S101" class="menu-button">Offices</a>
+        <a href="http://wa.me/256779085558?text=Hello,%20Steve%20I%20am%20from%20livesphere." class="menu-button">Contact Us</a>
+    </div>
+
+    <footer class="footer">
+        <p>© 2024 Live Sphere. All rights reserved.</p>
+        <p><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
