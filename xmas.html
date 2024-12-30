@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Games Homepage</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+        }
+
+        .header {
+            padding: 50px;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .game-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .game-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            width: 220px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+            opacity: 0; /* Start hidden */
+            transform: translateY(-20px); /* Move up */
+            animation: slideIn 0.5s forwards;
+        }
+
+        .game-card img {
+            width: 80px; /* Size of the game icon */
+            height: 80px; /* Size of the game icon */
+            margin-bottom: 10px;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Delay the appearance of each card */
+        .game-card:nth-child(1) { animation-delay: 0.1s; }
+        .game-card:nth-child(2) { animation-delay: 0.2s; }
+        .game-card:nth-child(3) { animation-delay: 0.3s; }
+        .game-card:nth-child(4) { animation-delay: 0.4s; }
+        .game-card:nth-child(5) { animation-delay: 0.5s; }
+        .game-card:nth-child(6) { animation-delay: 0.6s; }
+        .game-card:nth-child(7) { animation-delay: 0.7s; }
+        .game-card:nth-child(8) { animation-delay: 0.8s; }
+        .game-card:nth-child(9) { animation-delay: 0.9s; }
+        .game-card:nth-child(10) { animation-delay: 1.0s; }
+        .game-card:nth-child(11) { animation-delay: 1.1s; }
+        .game-card:nth-child(12) { animation-delay: 1.2s; }
+        .game-card:nth-child(13) { animation-delay: 1.3s; }
+        .game-card:nth-child(14) { animation-delay: 1.4s; }
+        .game-card:nth-child(15) { animation-delay: 1.5s; }
+        .game-card:nth-child(16) { animation-delay: 1.6s; }
+        .game-card:nth-child(17) { animation-delay: 1.7s; }
+        .game-card:nth-child(18) { animation-delay: 1.8s; }
+        .game-card:nth-child(19) { animation-delay: 1.9s; }
+        .game-card:nth-child(20) { animation-delay: 2.0s; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Awesome Games</h1>
+        <p>Explore a world of gaming fun!</p>
+    </header>
+    
+    <main class="game-container">
+        <div class="game-card" onclick="window.location.href='go:S001';">
+           <img src="https://i.ibb.co/12QckYW/180x120.jpg" alt="Game 1 Icon">
+            <h2>Ant smash</h2>
+            <p>An exciting adventure awaits!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S002';">
+         <img src="https://i.ibb.co/vYyjWm0/180x120-1.jpg" alt="Game 2 Icon">
+            <h2>Jewels Block Puzzle</h2>
+            <p>Join the thrilling race!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S003';">
+           <img src="https://i.ibb.co/N6Pm3Ys/flip.jpg" alt="Game 3 Icon">
+            <h2>Flip knife</h2>
+            <p>Unleash your strategy skills!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S004';">
+            <img src="https://i.ibb.co/K5Q1r5L/mvb.jpg" alt="Game 4 Icon">
+            <h2>Math vs Bat</h2>
+            <p>Embark on a mysterious quest!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S005';">
+            <img src="https://via.placeholder.com/80" alt="Game 5 Icon">
+            <h2>Game 5</h2>
+            <p>Fight off the invading forces!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S006';">
+            <img src="https://via.placeholder.com/80" alt="Game 6 Icon">
+            <h2>Game 6</h2>
+            <p>Master the art of war!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S007';">
+            <img src="https://via.placeholder.com/80" alt="Game 7 Icon">
+            <h2>Game 7</h2>
+            <p>Defend your kingdom!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S008';">
+            <img src="https://via.placeholder.com/80" alt="Game 8 Icon">
+            <h2>Game 8</h2>
+            <p>Explore the world of magic!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S009';">
+            <img src="https://via.placeholder.c om/80" alt="Game 9 Icon">
+            <h2>Game 9</h2>
+            <p>Build your empire!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S010';">
+            <img src="https://via.placeholder.com/80" alt="Game 10 Icon">
+            <h2>Game 10</h2>
+            <p>Survive the zombie apocalypse!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S011';">
+            <img src="https://via.placeholder.com/80" alt="Game 11 Icon">
+            <h2>Game 11</h2>
+            <p>Race against time!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S012';">
+            <img src="https://via.placeholder.com/80" alt="Game 12 Icon">
+            <h2>Game 12</h2>
+            <p>Become a hero!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S013';">
+            <img src="https://via.placeholder.com/80" alt="Game 13 Icon">
+            <h2>Game 13</h2>
+            <p>Unlock ancient secrets!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S014';">
+            <img src="https://via.placeholder.com/80" alt="Game 14 Icon">
+            <h2>Game 14</h2>
+            <p>Challenge your mind!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S015';">
+            <img src="https://via.placeholder.com/80" alt="Game 15 Icon">
+            <h2>Game 15</h2>
+            <p>Survive the wilderness!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S016';">
+            <img src="https://via.placeholder.com/80" alt="Game 16 Icon">
+            <h2>Game 16</h2>
+            <p>Dance to the rhythm!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S017';">
+            <img src="https://via.placeholder.com/80" alt="Game 17 Icon">
+            <h2>Game 17</h2>
+            <p>Build your dream city!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S018';">
+            <img src="https://via.placeholder.com/80" alt="Game 18 Icon">
+            <h2>Game 18</h2>
+            <p>Become a master detective!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S019';">
+            <img src="https://via.placeholder.com/80" alt="Game 19 Icon">
+            <h2>Game 19</h2>
+            <p>Challenge your opponents!</p>
+        </div>
+        <div class="game-card" onclick="window.location.href='go:S020';">
+            <img src="https://via.placeholder.com/80" alt="Game 20 Icon">
+            <h2>Game 20</h2>
+            <p>Explore the universe!</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2023 Awesome Games</p>
+    </footer>
+
+    <script>
+        // You can add any additional game logic here
+        console.log("Welcome to Awesome Games!");
+    </script>
+</body>
+</html>
